@@ -19,6 +19,9 @@ public class apple : MonoBehaviour
             Destroy(gameObject); // Destroy the apple if it falls below bottomY
             {
                 Destroy(this.gameObject); // Destroy the apple if it falls below bottomY
+                //get a reference to the applepicker component of main camera
+                ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
+                apScript.AppleMissed(); // Call the applemissed method of the applepicker script
             }
         }
     }

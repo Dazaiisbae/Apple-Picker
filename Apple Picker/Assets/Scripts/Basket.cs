@@ -32,6 +32,7 @@ public class Basket : MonoBehaviour
         {
             Destroy(collidedWith);  // Destroy the apple
             scoreCounter.score += 100;  
+            HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score); // Update the high score if necessary
         }
     }
 }
